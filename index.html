@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="REM WATT — сервисный центр по ремонту и обслуживанию ресторанной техники в Ташкенте. Выезд на объект или приём в сервисном центре."
+    />
+    <title data-i18n="meta.title">REM WATT — ремонт ресторанной техники | Ташкент</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Перейти к содержимому</a>
+
+    <header class="site-header" id="top">
+      <div class="header-inner">
+        <a class="brand-mark" href="#top" aria-label="REM WATT">
+          <img src="assets/logo.jpeg" alt="" class="brand-logo" />
+        </a>
+        <nav class="site-nav" aria-label="Основная навигация" data-i18n-aria="a11y.nav">
+          <a href="#about" data-i18n="nav.about">О компании</a>
+          <a href="#services" data-i18n="nav.services">Услуги</a>
+          <a href="#advantages" data-i18n="nav.advantages">Преимущества</a>
+          <a href="#clients" data-i18n="nav.clients">Клиенты</a>
+          <a href="#contact" data-i18n="nav.contact">Контакты</a>
+        </nav>
+        <div class="header-actions">
+          <div class="lang-switch" role="group" aria-label="Язык" data-i18n-aria="a11y.language">
+            <button type="button" class="lang-btn is-active" data-lang="ru" aria-pressed="true">RU</button>
+            <button type="button" class="lang-btn" data-lang="uz" aria-pressed="false">UZ</button>
+          </div>
+          <a class="btn btn-header" href="#contact"><span class="btn-inner" data-i18n="nav.cta">Оставить заявку</span></a>
+        </div>
+        <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Меню" data-i18n-aria="a11y.menu">
+          <span class="menu-toggle-bar"></span>
+          <span class="menu-toggle-bar"></span>
+        </button>
+      </div>
+      <div class="mobile-nav" id="mobile-nav" hidden>
+        <a href="#about" data-i18n="nav.about">О компании</a>
+        <a href="#services" data-i18n="nav.services">Услуги</a>
+        <a href="#advantages" data-i18n="nav.advantages">Преимущества</a>
+        <a href="#clients" data-i18n="nav.clients">Клиенты</a>
+        <a href="#contact" data-i18n="nav.contact">Контакты</a>
+        <a class="btn btn-block" href="#contact" data-i18n="nav.cta">Оставить заявку</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-layout">
+          <div class="hero-copy">
+            <p class="eyebrow" data-i18n="hero.eyebrow">Сервисный центр REM WATT</p>
+            <h1 id="hero-title" class="hero-title" data-i18n="hero.headline">
+              Ремонт ресторанной техники, когда важно качество
+            </h1>
+            <p class="hero-sub" data-i18n="hero.sub">
+              Ремонтируем и обслуживаем профессиональное оборудование для ресторанов, кафе и производственных кухонь: печи, холодильное оборудование, посудомоечные машины, тепловые линии и электронику управления.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#contact"><span class="btn-inner" data-i18n="hero.cta">Оставить заявку</span></a>
+              <a class="btn btn-ghost" href="#services"><span class="btn-inner" data-i18n="hero.secondary">Наши услуги</span></a>
+            </div>
+            <dl class="hero-stats">
+              <div class="hero-stat">
+                <dt data-i18n="hero.stat1.label">Как работаем</dt>
+                <dd data-i18n="hero.stat1.value">Выезд на объект или приём в сервисном центре</dd>
+              </div>
+              <div class="hero-stat">
+                <dt data-i18n="hero.stat2.label">Где работаем</dt>
+                <dd data-i18n="hero.stat2.value">Ташкент и регионы Узбекистана</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="hero-aside">
+            <figure class="hero-photo-wrap">
+              <div class="hero-photo" role="img" aria-hidden="true"></div>
+            </figure>
+            <p class="hero-badge" data-i18n="hero.badge">Профессиональный сервис для HoReCa</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about" id="about" aria-labelledby="about-title">
+        <div class="about-layout">
+          <div class="about-media">
+            <div class="about-grid-photos">
+              <div class="about-photo about-photo--main" role="img" aria-hidden="true"></div>
+              <div class="about-photo about-photo--secondary" role="img" aria-hidden="true"></div>
+            </div>
+            <p class="about-caption" data-i18n="about.caption">Шеф-повар и сервисные мастера · техника, с которой мы работаем каждый день</p>
+          </div>
+          <div class="about-content">
+            <p class="eyebrow" data-i18n="about.eyebrow">Кто мы</p>
+            <h2 id="about-title" class="section-title" data-i18n="about.title">Надёжный сервис для ресторанной кухни</h2>
+            <p class="lead" data-i18n="about.lead">
+              REM WATT — сервисный центр по ремонту профессионального кухонного оборудования. Работаем с техникой, от которой зависит кухня: тепловое, холодильное, моечное оборудование и системы управления. Объясняем проблему понятным языком и предлагаем решение по делу.
+            </p>
+            <ul class="about-list">
+              <li data-i18n="about.point1">Если неисправность можно устранить на месте, мастер выезжает на объект. Более сложный ремонт выполняем в сервисном центре.</li>
+              <li data-i18n="about.point2">Работаем по Ташкенту и при необходимости выезжаем в другие города и регионы Узбекистана.</li>
+              <li data-i18n="about.point3">Подстраиваемся под график кухни, чтобы не мешать смене и не затягивать простой оборудования.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section services" id="services" aria-labelledby="services-title">
+        <div class="section-intro">
+          <p class="eyebrow" data-i18n="services.eyebrow">Услуги</p>
+          <h2 id="services-title" class="section-title" data-i18n="services.title">Что делаем для кухни</h2>
+          <p class="section-desc" data-i18n="services.desc">
+            Проводим диагностику, ремонт и плановое обслуживание профессиональной кухонной техники.
+          </p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card">
+            <span class="service-index">01</span>
+            <h3 data-i18n="services.s1.title">Диагностика</h3>
+            <p data-i18n="services.s1.text">Находим причину неисправности, проверяем узлы и даём понятное заключение без лишних слов.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-index">02</span>
+            <h3 data-i18n="services.s2.title">Ремонт</h3>
+            <p data-i18n="services.s2.text">Меняем вышедшие из строя детали, устраняем неисправность и возвращаем технику в рабочий режим.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-index">03</span>
+            <h3 data-i18n="services.s3.title">Обслуживание</h3>
+            <p data-i18n="services.s3.text">Проводим профилактику, чистку, настройку и проверку оборудования, чтобы снизить риск повторных поломок.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-index">04</span>
+            <h3 data-i18n="services.s4.title">Монтаж и пусконаладка</h3>
+            <p data-i18n="services.s4.text">Выполняем монтаж и пусконаладку профессиональной кухонной техники.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section advantages" id="advantages" aria-labelledby="adv-title">
+        <div class="adv-header">
+          <p class="eyebrow" data-i18n="adv.eyebrow">Почему выбирают нас</p>
+          <h2 id="adv-title" class="section-title" data-i18n="adv.title">Спокойный сервис без лишних обещаний</h2>
+        </div>
+        <ul class="adv-list">
+          <li class="adv-item">
+            <div class="adv-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2" />
+                <path d="M16 9v7l5 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="adv-text">
+              <h3 data-i18n="adv.a.title">Быстрая обратная связь</h3>
+              <p data-i18n="adv.a.text">Принимаем заявку, связываемся с вами и сразу согласовываем удобный формат работы.</p>
+            </div>
+          </li>
+          <li class="adv-item">
+            <div class="adv-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 21h20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <path d="M8 21a8 8 0 0 1 16 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <path d="M16 10V8" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <circle cx="16" cy="7" r="1.5" fill="currentColor" />
+              </svg>
+            </div>
+            <div class="adv-text">
+              <h3 data-i18n="adv.b.title">Специализация на HoReCa</h3>
+              <p data-i18n="adv.b.text">Понимаем специфику ресторанной кухни и работаем именно с профессиональным оборудованием.</p>
+            </div>
+          </li>
+          <li class="adv-item">
+            <div class="adv-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="9" y="7" width="14" height="18" rx="2" stroke="currentColor" stroke-width="2" />
+                <path d="M13 7h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <path d="M12.5 17l2.5 2.5 4.5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="adv-text">
+              <h3 data-i18n="adv.c.title">Понятная диагностика</h3>
+              <p data-i18n="adv.c.text">Говорим по существу: что сломалось, что нужно заменить и какой вариант ремонта действительно имеет смысл.</p>
+            </div>
+          </li>
+          <li class="adv-item">
+            <div class="adv-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 27s7-6.25 7-12a7 7 0 1 0-14 0c0 5.75 7 12 7 12z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                <circle cx="16" cy="15" r="2.5" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </div>
+            <div class="adv-text">
+              <h3 data-i18n="adv.d.title">Выезд и сервисный центр</h3>
+              <p data-i18n="adv.d.text">Принимаем технику в сервисном центре и выезжаем на объект, если ремонт удобнее делать на месте.</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section clients" id="clients" aria-labelledby="clients-title">
+        <div class="section-intro section-intro--row">
+          <div>
+            <p class="eyebrow" data-i18n="clients.eyebrow">Рестораны и кухни</p>
+            <h2 id="clients-title" class="section-title" data-i18n="clients.title">С кем мы работаем</h2>
+          </div>
+          <p class="section-desc section-desc--narrow" data-i18n="clients.desc">
+            Среди наших клиентов — рестораны, кафе и профессиональные кухни, которым важна стабильная работа оборудования.
+          </p>
+        </div>
+        <div class="clients-marquee" aria-label="Бренды" data-i18n-aria="a11y.brands">
+          <div class="clients-track">
+            <span class="client-pill">Basilic</span>
+            <span class="client-pill">Hori</span>
+            <span class="client-pill">Brasserie</span>
+            <span class="client-pill">Киш-миш</span>
+            <span class="client-pill">Apex Pizza</span>
+            <span class="client-pill">Zohid Kebab</span>
+            <span class="client-pill" aria-hidden="true">Basilic</span>
+            <span class="client-pill" aria-hidden="true">Hori</span>
+            <span class="client-pill" aria-hidden="true">Brasserie</span>
+          </div>
+        </div>
+        <div class="clients-grid">
+          <span class="client-badge">Basilic</span>
+          <span class="client-badge">Hori</span>
+          <span class="client-badge">Brasserie</span>
+          <span class="client-badge">Киш-миш</span>
+          <span class="client-badge">Apex Pizza</span>
+          <span class="client-badge">Zohid Kebab</span>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="contact-head">
+          <p class="eyebrow" data-i18n="form.eyebrow">Связь</p>
+          <h2 class="section-title contact-head-title" data-i18n="form.title">Оставьте заявку</h2>
+          <p class="section-desc contact-head-desc" data-i18n="form.lead">
+            Опишите проблему и оставьте контакт. Мы свяжемся с вами, уточним детали и предложим удобный вариант ремонта.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-form-col">
+            <form class="request-form" id="request-form" novalidate>
+              <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+              <div class="form-row">
+                <label class="form-field">
+                  <span data-i18n="form.nameLabel">Имя</span>
+                  <input type="text" name="name" autocomplete="name" required data-i18n-placeholder="form.namePh" placeholder="Имя для связи" />
+                </label>
+                <label class="form-field">
+                  <span data-i18n="form.phoneLabel">Телефон</span>
+                  <input
+                    type="tel"
+                    name="phone"
+                    autocomplete="tel"
+                    inputmode="tel"
+                    maxlength="16"
+                    spellcheck="false"
+                    required
+                    data-i18n-placeholder="form.phonePh"
+                    placeholder="+998971234567"
+                  />
+                </label>
+              </div>
+              <label class="form-field">
+                <span data-i18n="form.problemLabel">Опишите проблему</span>
+                <textarea name="problem" rows="5" required data-i18n-placeholder="form.problemPh" placeholder="Тип оборудования, неисправность, город и адрес"></textarea>
+              </label>
+              <label class="form-consent">
+                <input type="checkbox" name="consent" required />
+                <span data-i18n="form.consentLabel">Я соглашаюсь на обработку персональных данных</span>
+              </label>
+              <button type="submit" class="btn btn-primary btn-block">
+                <span class="btn-inner" data-i18n="form.submit">Отправить заявку</span>
+              </button>
+            </form>
+          </div>
+          <div class="contact-map-col">
+            <p class="map-label" data-i18n="map.label">Адрес сервисного центра</p>
+            <div class="map-shell frame-accent">
+              <div id="service-map" class="leaflet-map" role="region"></div>
+            </div>
+            <p class="map-hint" data-i18n="map.hint">На карте отмечен сервисный центр REM WATT.</p>
+          </div>
+        </div>
+
+        <div class="contacts-bar" id="contacts-bar">
+          <div class="contacts-item">
+            <span class="contacts-label" data-i18n="contacts.phoneLabel">Телефон</span>
+            <a href="tel:+998974126979" data-i18n="contacts.phoneValue">+998 (97) 412-69-79</a>
+          </div>
+          <div class="contacts-item">
+            <span class="contacts-label" data-i18n="contacts.tgLabel">Telegram</span>
+            <a href="https://t.me/remwattbot" target="_blank" rel="noopener noreferrer" data-i18n="contacts.tgValue">@remwattbot</a>
+          </div>
+          <div class="contacts-item">
+            <span class="contacts-label" data-i18n="contacts.addrLabel">Адрес</span>
+            <span data-i18n="contacts.addrValue">г. Ташкент,Мирзо-Улугбекский район, Проспект Мустакиллик, 38…</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="assets/logo.jpeg" alt="" class="footer-logo" />
+          <p data-i18n="footer.tagline">REM WATT — ремонт и обслуживание ресторанной техники в Ташкенте.</p>
+        </div>
+        <p class="footer-copy">
+          <span data-i18n="footer.copy">©</span>
+          <span id="year"></span>
+          <span>[vero.devs]</span>
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer crossorigin=""></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>
