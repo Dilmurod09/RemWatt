@@ -477,7 +477,7 @@ function formatTelegramMessage(payload, lang) {
 
 async function sendTelegramMessage(payload, lang) {
   const TELEGRAM_BOT_TOKEN = "8750321573:AAG6nj3avffR3pyUB5ZjMGRZDJmbRq6E1zY";
-  const TELEGRAM_CHAT_ID = "-5234661365";
+  const TELEGRAM_CHAT_ID = "-1003771669347";
 
   const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
     method: "POST",
